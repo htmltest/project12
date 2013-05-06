@@ -642,4 +642,33 @@ var mainSliderTimer = null;
         $('.map-inner').css({'width': curWidth, 'height': curHeight});
     });
 
+    // верхняя полоса
+    var periodTop = 1000;
+    var speedTop  = 500;
+    var timerTop  = null;
+
+    $(document).ready(function() {
+
+        $('.top-ctrl').click(function() {
+            window.clearTimeout(timerTop);
+            timerTop = false;
+            var curText = $(this).html();
+            $(this).html($(this).attr('rel'));
+            $(this).attr('rel', curText);
+            $('.top').toggleClass('top-open');
+            $('.top-banners').slideToggle(speedTop);
+            return false;
+        });
+
+        $('.top-banners-close').click(function() {
+            $('.top-ctrl').trigger('click');
+            return false;
+        });
+
+    });
+
+    $(window).load(function() {
+        timerTop = window.setTimeout(function() { $('.top-ctrl').trigger('click'); }, periodTop);
+    });
+
 })(jQuery);

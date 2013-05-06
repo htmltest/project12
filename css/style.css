@@ -13,12 +13,36 @@ img {border:none}
 
 .wrapper {min-width:980px; min-height:100%; width:100%; position:relative; overflow:hidden}
 .wrapper-inner {width:980px; margin:0 auto; padding:0 0 399px 0}
+.wrapper-top-fixed .wrapper-inner {padding-top:46px}
 
-.top {height:30px; background:#3f3f3f}
-.top-social {width:980px; text-align:right; position:absolute; left:50%; top:7px; margin-left:-490px; font-size:0; line-height:0; letter-spacing:-5px}
+.top {position:relative; background:#3f3f3f; border-bottom:4px solid #ee3a43; z-index:99}
+.wrapper-top-fixed .top {position:fixed; left:0; top:0; width:100%}
+.top-open {border-color:#6194d9}
+.top-inner {width:980px; position:relative; margin:0 auto}
+.top-banners {width:100%; position:relative; overflow:hidden}
+.top-banners-top {text-align:center; height:45px; font:20px/45px "pf_din_text_cond_pro_medium", arial, helvetica, sans-serif; letter-spacing:1px; color:#faa11f; text-transform:uppercase; position:relative}
+.top-banners-top a {position:absolute; right:0; top:13px; display:block; width:24px; height:22px; background:url(../images/top-banners-close.png)}
+.top-banners-inner {width:100%; padding:0 0 5px 0; line-height:0; font-size:0}
+.top-banners-inner:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.top-banners-item {float:right; width:480px}
+.top-banners-item:first-child {float:left}
+.top-links {width:100%; font:11px/42px "pf_din_text_cond_pro_medium", arial, helvetica, sans-serif; letter-spacing:1px; height:42px; word-spacing:1px}
+.top-links:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.top-title {float:left; height:42px; color:#8d8c8c; text-transform:uppercase; padding:0 21px 0 0; background:url(../images/top-sep.png) no-repeat right 14px}
+.top-link-1 {float:left; height:42px; text-transform:uppercase; padding:0 21px 0 20px; background:url(../images/top-sep.png) no-repeat right 14px}
+.top-link-1 a {float:left; text-decoration:none; color:#b4d4ff; padding:0 0 0 57px; background:url(../images/top-link-1.png) no-repeat left 14px}
+.top-link-1 a:hover {color:#80b6ff}
+.top-link-2 {float:left; height:42px; text-transform:uppercase; padding:0 21px 0 17px; background:url(../images/top-sep.png) no-repeat right 14px}
+.top-link-2 a {float:left; text-decoration:none; color:#d59b57; padding:0 0 0 52px; background:url(../images/top-link-2.png) no-repeat left 13px}
+.top-link-2 a:hover {color:#ffc662}
+.top-link-3 {float:left; height:42px; text-transform:uppercase; padding:0 21px 0 19px; background:url(../images/top-sep.png) no-repeat right 14px}
+.top-link-3 a {float:left; text-decoration:none; color:#d6747d; padding:0 0 0 50px; background:url(../images/top-link-3.png) no-repeat left 12px}
+.top-link-3 a:hover {color:#fe6a77}
+.top-social {float:right; padding-top:13px; font-size:0; line-height:0; letter-spacing:-5px; white-space:nowrap}
 .top-social a {margin:0 0 0 4px}
-.top-inner {height:30px; background:url(../images/top.png) repeat-x left 15px; width:500px; margin:0 auto; position:relative}
-.top-inner div {width:270px; margin:0 auto; height:30px; background:#3f3f3f; color:#d6d6d6; text-transform:uppercase; text-align:center; font:12px/31px "pf_din_text_cond_pro_medium", arial, helvetica, sans-serif; letter-spacing:1px}
+a.top-ctrl {position:absolute; left:50%; bottom:-20px; display:block; width:77px; margin-left:-54px; padding:0 0 0 30px; height:16px; background:url(../images/top-ctrl.png); color:#fff; text-decoration:none; font-size:11px; font-weight:bold; line-height:11px}
+a.top-ctrl:hover {color:#fff}
+.top-open a.top-ctrl {background-position:left -16px}
 
 .header {height:115px; position:relative}
 
