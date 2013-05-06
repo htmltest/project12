@@ -1,0 +1,87 @@
+@font-face {font-family:"pf_din_text_cond_pro_light"; src:url("../fonts/pfdintextcondpro-light-webfont.eot"); src:url("../fonts/pfdintextcondpro-light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/pfdintextcondpro-light-webfont.woff") format("woff"), url("../fonts/pfdintextcondpro-light-webfont.svg#pf_din_text_cond_pro_lightRg") format("svg"), url("../fonts/pfdintextcondpro-light-webfont.ttf") format("truetype"); font-weight:normal; font-style:normal}
+@font-face {font-family:"pf_din_text_cond_pro_medium"; src:url("../fonts/pfdintextcondpro-medium-webfont.eot"); src:url("../fonts/pfdintextcondpro-medium-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/pfdintextcondpro-medium-webfont.woff") format("woff"), url("../fonts/pfdintextcondpro-medium-webfont.svg#pf_din_text_cond_pro_mediumRg") format("svg"), url("../fonts/pfdintextcondpro-medium-webfont.ttf") format("truetype"); font-weight:normal; font-style:normal}
+
+html {height:100%; min-width:800px}
+
+body {height:100%; min-width:800px; margin:0; padding:0; font:14px/19px arial, helvetica, sans-serif; color:#333; background:#fff}
+
+a {color:#79a8e7; outline:none}
+a:hover {color:#d9232c}
+
+img {border:none}
+
+.wrapper {width:800px; margin:0 auto}
+
+.header {height:106px; position:relative; border-bottom:1px solid #dadada; margin-bottom:1px}
+
+.logo {position:absolute; left:0; top:25px; background:none}
+
+.title {position:absolute; left:241px; top:10px; width:200px; font-size:11px; color:#646464}
+.title div {color:#6193d8; text-transform:uppercase; font:28px/25px "pf_din_text_cond_pro_medium", arial, helvetica, sans-serif}
+.title div span {color:#434343; font-family:"pf_din_text_cond_pro_light", arial, helvetica, sans-serif}
+
+.hotline {position:absolute; right:0px; top:10px; font-size:11px; color:#646464}
+.hotline-phone {color:#6193d8; font:28px/25px "pf_din_text_cond_pro_medium", arial, helvetica, sans-serif; letter-spacing:-1px; padding:0 0 2px 0}
+.hotline-phone span {font-family:"pf_din_text_cond_pro_light", arial, helvetica, sans-serif}
+
+.middle {width:100%; border-top:1px solid #dadada}
+.middle:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+
+.container {padding:16px 0 0 0}
+.content {float:left; width:100%}
+
+.content h2 {text-transform:uppercase; color:#231f20; font:30px/30px "pf_din_text_cond_pro_light", arial, helvetica, sans-serif; margin:0; padding:10px 0}
+
+.order-form-cart {padding:2px 0 0 82px; height:73px; margin-top:10px; position:relative; font-size:13px; line-height:21px; color:#808080; font-style:italic}
+.order-form-cart img {position:absolute; left:0; top:0}
+.order-form-cart strong {color:#333333; font-size:14px; font-style:normal}
+.order-form-cart span {color:#6193d8; font-size:14px; font-style:normal; font-weight:bold}
+
+.order-result {width:800px}
+
+.order-result-info {width:100%; border-bottom:1px solid #dadada; padding:0 0 21px 0; margin-bottom:20px}
+.order-result-info:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.order-result-info-text {float:left; width:600px; font-size:12px; font-style:italic; line-height:14px; color:#808080}
+.order-result-info-text div {font-size:18px; line-height:24px; font-style:normal; padding:12px 0 3px 0}
+.order-result-info-text div span {font-size:24px; color:#6193d8}
+
+.order-result-block {border-top:1px solid #dadada; margin-top:9px; padding:7px 0 0 0}
+.order-result-block h2 {color:#808080}
+.order-result-block-content {padding:0 0 2px 0}
+.order-result-block-row {width:100%; padding:0 0 7px 0}
+.order-result-block-row:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.order-result-block-name {float:left; font-size:12px; font-style:italic; color:#808080; width:150px; padding:1px 0 0 0}
+.order-result-block-value {float:left; width:650px; color:#6193d8}
+.order-result-block-value em {font-size:13px; line-height:17px}
+
+.geo-print {width:100%}
+.geo-print:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.geo-print-map {float:left; width:478px; padding:9px 0 0 0}
+.geo-print-map-inner {width:478px; height:478px; line-height:0; overflow:hidden; position:relative}
+
+.geo-print-info {float:right; width:302px}
+.geo-print-info h2 {padding-top:5px}
+.partner-info-row {width:100%}
+.partner-info-row:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.partner-info-label {float:left; width:100px; font-size:11px; color:#a5a5a5; padding:2px 0 0 0}
+.partner-info-value {margin-left:100px; font-size:13px}
+
+.geo-baloon-title {font:bold 13px/18px arial, helvetica, sans-serif; color:#6193d8; text-transform:uppercase}
+.geo-ballon-city-link {font:11px/13px arial, helvetica, sans-serif; padding:3px 0 0 0}
+.geo-ballon-city-link a {color:#79a8e7}
+.geo-ballon-city-link a:hover {color:#d9232c}
+.geo-baloon-place .geo-baloon-title {padding:0 0 4px 0; color:#ee3a43}
+.geo-ballon-row {font:10px/12px arial, helvetica, sans-serif; color:#333; padding:0 0 5px 0}
+.geo-ballon-row span {width:87px; display:inline-block; color:#a5a5a5}
+
+.ymaps-b-balloon__tr {width:15px !important; background:url(../images/ymaps-b-balloon__tr.png) !important; margin-left:-15px !important}
+.ymaps-b-balloon__tl {background:url(../images/ymaps-b-balloon__tl.png) !important; margin-right:15px !important}
+.ymaps-b-balloon__sprite_position_tl {background:none !important}
+.ymaps-b-balloon__content {border:none !important; background:url(../images/ymaps-b-balloon__content.png) repeat-y right top !important; padding:0 15px 0 0 !important}
+.ymaps-b-balloon__content-holster {background:url(../images/ymaps-b-balloon__content-holster.png) repeat-y left top !important; padding:0 0 0 16px !important; margin-right:13px !important}
+.ymaps-b-balloon__bl {background:url(../images/ymaps-b-balloon__bl.png) !important; height:25px !important}
+.ymaps-b-balloon__sprite_position_bl {background:none !important}
+.ymaps-b-balloon__br {height:16px !important; background:url(../images/ymaps-b-balloon__br.png) right top !important}
+.ymaps-b-balloon__sprite_position_br {background:none !important}
+.ymaps-b-balloon__tail {display:none !important}
+.ymaps-b-balloon__close {width:12px !important; height:12px !important; background:url(../images/geo-close.png) !important; top:10px !important; right:17px !important}

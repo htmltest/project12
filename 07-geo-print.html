@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>Сделай пол</title>
+        <link rel="stylesheet" href="css/print.css" type="text/css" />
+    </head>
+
+    <body onload="window.print();">
+
+        <!-- wrapper -->
+        <div class="wrapper">
+
+            <!-- header -->
+            <div class="header">
+                <a href="#" class="logo"><img src="images/logo.png" alt="" width="220" height="52" /></a>
+
+                <div class="title">Инновационная разработка <div>Новое покрытие <span>для пола</span></div></div>
+
+                <div class="hotline">
+                    Горячая линия
+                    <div class="hotline-phone"><span>8 (800)</span> 100-80-75</div>
+                </div>
+            </div>
+            <!-- header END -->
+
+            <!-- middle -->
+            <div class="middle">
+
+                <div class="container">
+                    <div class="content">
+
+                        <!-- geo print -->
+                        <div class="geo-print">
+                            <div class="geo-print-map">
+                                <div class="geo-print-map-inner" id="map">
+                                </div>
+                                <script src="http://api-maps.yandex.ru/2.0/?load=package.full&lang=ru-RU" type="text/javascript"></script>
+                                <script type="text/javascript">
+                                    ymaps.ready(init);
+
+                                    function init () {
+                                        var myMap = new ymaps.Map('map', {
+                                            center: [55.76, 37.64],
+                                            zoom: 8
+                                        });
+                                        myMap.controls
+                                            .add('zoomControl')
+                                            .add('typeSelector')
+                                            .add('smallZoomControl')
+                                            .add('mapTools');
+                                        myPlacemark = new ymaps.Placemark([55.76, 37.64], {
+                                            balloonContent: '<div class="geo-baloon-city"><div class="geo-baloon-title">Москва</div><div class="geo-ballon-city-link"><a href="#">Посмотреть всех дилеров в городе</a></div></div>'
+                                        }, {
+                                            balloonShadow: false,
+                                            iconImageHref: 'images/geo-icon-city.png',
+                                            iconImageSize: [26, 35]
+                                        });
+                                        myMap.geoObjects.add(myPlacemark);
+                                    }
+                                </script>
+                            </div>
+                            <div class="geo-print-info">
+                                <h2>ООО «Спецпродукт»</h2>
+                                <div class="partner-info">
+                                    <div class="partner-info-row">
+                                        <div class="partner-info-label">Город:</div>
+                                        <div class="partner-info-value">Ставрополь</div>
+                                    </div>
+                                    <div class="partner-info-row">
+                                        <div class="partner-info-label">Адрес:</div>
+                                        <div class="partner-info-value">Ставрополь, пр-кт  Кулакова,  д.&nbsp;8</div>
+                                    </div>
+                                    <div class="partner-info-row">
+                                        <div class="partner-info-label">Телефон:</div>
+                                        <div class="partner-info-value">8 (495) 022-22-22, 8 (495) 022-22-22, 8 (495) 022-22-22</div>
+                                    </div>
+                                    <div class="partner-info-row">
+                                        <div class="partner-info-label">Время работы:</div>
+                                        <div class="partner-info-value">С 8 до 17, Вс — выходной</div>
+                                    </div>
+                                    <div class="partner-info-row">
+                                        <div class="partner-info-label">Веб-сайт:</div>
+                                        <div class="partner-info-value"><a href="#">www.spoffer.biz</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- geo print END -->
+
+                    </div>
+                </div>
+
+            </div>
+            <!-- middle END -->
+
+        </div>
+        <!-- wrapper END -->
+
+    </body>
+</html>
