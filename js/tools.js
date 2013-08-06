@@ -642,33 +642,15 @@ var mainSliderTimer = null;
         $('.map-inner').css({'width': curWidth, 'height': curHeight});
     });
 
-    // верхняя полоса
-    var periodTop = 1000;
-    var speedTop  = 500;
-    var timerTop  = null;
-
+    // покупка комплекта на главной
     $(document).ready(function() {
-
-        $('.top-ctrl').click(function() {
-            window.clearTimeout(timerTop);
-            timerTop = false;
-            var curText = $(this).html();
-            $(this).html($(this).attr('rel'));
-            $(this).attr('rel', curText);
-            $('.top').toggleClass('top-open');
-            $('.top-banners').slideToggle(speedTop);
-            return false;
+        $('.main-buy-item input:checked').parent().addClass('main-buy-item-checked');
+        $('.main-buy-item').click(function() {
+            var curName = $(this).find('input').attr('name');
+            $('.main-buy-item input[name="' + curName + '"]').parent().removeClass('main-buy-item-checked');
+            $(this).addClass('main-buy-item-checked');
+            $(this).find('input').prop('checked', true).trigger('change');
         });
-
-        $('.top-banners-close').click(function() {
-            $('.top-ctrl').trigger('click');
-            return false;
-        });
-
-    });
-
-    $(window).load(function() {
-        timerTop = window.setTimeout(function() { $('.top-ctrl').trigger('click'); }, periodTop);
     });
 
 })(jQuery);
