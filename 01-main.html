@@ -382,8 +382,53 @@
                     <div class="main-container">
                         <div class="main-geo">
                             <h2><a href="#"><span>География</span> продаж</a></h2>
-                            <div class="main-geo-map">
-                                <script type="text/javascript" charset="utf-8" src="http://api-maps.yandex.ru/services/constructor/1.0/js/?sid=emquJWoqBmW300_eKxEKuiXNEbXFKm0w&width=692&height=271"></script>
+                            <div class="main-geo-map" id="map">
+                                <script src="http://api-maps.yandex.ru/2.0/?load=package.full&lang=ru-RU" type="text/javascript"></script>
+                                <script type="text/javascript">
+                                    ymaps.ready(init);
+
+                                    function init () {
+                                        var curWidth = $(window).width();
+                                        var curHeight = $(window).height() - $('.header').height() - $('.menu').height() - $('.footer').height();
+                                        $('.map-inner').css({'width': curWidth, 'height': curHeight});
+
+                                        var myMap = new ymaps.Map('map', {
+                                            center: [55.76, 37.64],
+                                            zoom: 8
+                                        });
+                                        myMap.controls
+                                            .add('zoomControl')
+                                            .add('typeSelector')
+                                            .add('smallZoomControl')
+                                            .add('mapTools');
+                                        myPlacemark = new ymaps.Placemark([55.76, 37.64], {
+                                            balloonContent: '<div class="geo-baloon-city"><div class="geo-baloon-title">Москва</div><div class="geo-ballon-city-link"><a href="#">Посмотреть всех дилеров в городе</a></div></div>'
+                                        }, {
+                                            balloonShadow: false,
+                                            iconImageHref: 'images/geo-icon-city.png',
+                                            iconImageSize: [26, 35]
+                                        });
+                                        myMap.geoObjects.add(myPlacemark);
+
+                                        myPlacemark = new ymaps.Placemark([55.96, 37.84], {
+                                            balloonContent: '<div class="geo-baloon-place"><div class="geo-baloon-title">ООО «Спецпродукт»</div><div class="geo-ballon-row"><span>Адрес:</span>Ставрополь, пр-кт  Кулакова,  д. 8</div><div class="geo-ballon-row"><span>Телефон:</span>8 (495) 022-22-22, 8 (495) 022-22-22, 8 (495) 022-22-22</div><div class="geo-ballon-row"><span>Время работы:</span>с 8 до 17, Вс — выходной</div><div class="geo-ballon-row"><span>Вебсайт:</span><a href="#">www.spezproduct.ru</a></div></div>'
+                                        }, {
+                                            balloonShadow: false,
+                                            iconImageHref: 'images/geo-icon-place.png',
+                                            iconImageSize: [26, 35]
+                                        });
+                                        myMap.geoObjects.add(myPlacemark);
+
+                                        myPlacemark = new ymaps.Placemark([55.56, 37.44], {
+                                            balloonContent: '<div class="geo-baloon-place"><div class="geo-baloon-title">ООО «Спецпродукт»</div></div>'
+                                        }, {
+                                            balloonShadow: false,
+                                            iconImageHref: 'images/geo-icon-place.png',
+                                            iconImageSize: [26, 35]
+                                        });
+                                        myMap.geoObjects.add(myPlacemark);
+                                    }
+                                </script>
                             </div>
                         </div>
                     </div>
