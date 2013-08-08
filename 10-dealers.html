@@ -77,8 +77,8 @@
                         <li><a href="#">О продукте</a></li>
                         <li><a href="#">Вопросы и ответы</a></li>
                         <li><a href="#">Пресс-центр</a></li>
-                        <li class="active"><a href="#">Проекты</a></li>
-                        <li><a href="#">Дилеры</a></li>
+                        <li><a href="#">Проекты</a></li>
+                        <li class="active"><a href="#">Дилеры</a></li>
                         <li><a href="#">Где купить</a></li>
                         <li><a href="#">Оплата и доставка</a></li>
                         <li><a href="#">Контакты</a></li>
@@ -89,70 +89,160 @@
                 <!-- middle -->
                 <div class="middle">
 
+                    <div class="left">
+                        <div class="left-title">Федеральные округа</div>
+                        <ul>
+                            <li>Москва</li>
+                            <li><a href="#">Центральный</a></li>
+                            <li><a href="#">Северо-западный</a></li>
+                            <li><a href="#">Южный</a></li>
+                            <li><a href="#">Приволжский</a></li>
+                            <li><a href="#">Уральский</a></li>
+                            <li><a href="#">Сибирский</a></li>
+                            <li><a href="#">Дальневосточный</a></li>
+                            <li><a href="#">Снг</a></li>
+                        </ul>
+                    </div>
+
                     <div class="container">
                         <div class="content">
 
                             <!-- breadcrumbs -->
-                            <div class="breadcrumbs"><a href="#">Сделай пол</a><span>&rarr;</span>Реализованные проекты</div>
+                            <div class="breadcrumbs"><a href="#">Сделай пол</a><span>&rarr;</span>Дилеры</div>
                             <!-- breadcrumbs END -->
 
-                            <h1>Реализованные проекты</h1>
+                            <h1>Дилеры</h1>
 
-                            <!-- projects filter -->
-                            <div class="projects-filter">
-                                <span>Сферы применения:</span>
-                                <strong>Все</strong>
-                                <a href="#">Гараж</a>
-                                <a href="#">Склад</a>
-                                <a href="#">Дом</a>
-                                <a href="#">Подъезд</a>
-                                <a href="#">Склад</a>
-                                <a href="#">Лестница</a>
-                                <a href="#">Подъезд</a>
-                            </div>
-                            <!-- projects filter END -->
+                            <!-- list -->
+                            <div class="list">
 
-                            <!-- project -->
-                            <div class="project">
-                                <div class="project-photo"><img src="files/project-photo.jpg" alt="" width="213" height="129" /></div>
-                                <div class="project-response-wrap">
-                                    <div class="project-response-photo"><img src="files/project-response-photo.jpg" alt="" width="100" height="130" /></div>
-                                    <div class="project-response">комплект «сделай пол» стал нашим спасением! 650 метров квадратных за 3 дня — сказали бы раньше — я бы не поверил!</div>
+                                <!-- list filter -->
+                                <div class="list-filter">
+                                    <form action="#" method="post">
+                                        <div class="list-filter-input"><input type="text" name="dealer" value="" placeholder="Поиск по названию" /></div>
+                                        <div class="list-filter-submit"><input type="submit" value="Найти" /></div>
+                                    </form>
                                 </div>
-                                <div class="project-info">
-                                    <div class="project-name"><a href="#">Складской комплекс. <span>Великий новгород.</span></a></div>
-                                    <div class="project-anonce"><p><a href="#">Состав «Сделай ПОЛ» изготавливается с использованием последних разработок и материалов, произведенных на базе передовых, в том числе нанотехнологий. Универсальность состава заключается в одновременном использовании различных эпоксидных смол, обеспечивающих одновременно функции грунтовочного и финишного покрытий. Поверхность не нужно грунтовать.</a></p></div>
-                                    <div class="project-link"><a href="#">Подробнее о проекте</a> &rarr;</div>
-                                </div>
-                            </div>
-                            <!-- project END -->
+                                <script type="text/javascript">
+                                    var availableDealers = [
+                                        'Castorama',
+                                        'Дом Маляра',
+                                        'K-rauta',
+                                        'Краски.ру',
+                                        'ООО "ЛДМ-Групп"',
+                                        'Компания "МАКСИМ"',
+                                        'ООО "Мир Ремонта" ХДМ ЮГ',
+                                        'РДС маркет',
+                                        'РДС строй',
+                                        'ООО "Сатурн"',
+                                        'ООО «Спецпродукт-Ставрополь»',
+                                        'СтройМаркт',
+                                        'Компания "СтилДом"',
+                                        'Корпорация "ТехноНИКОЛЬ"',
+                                        'Строительный БУМ',
+                                        'Торговый комплекс «Авеста»',
+                                        'СтройМАРТ Бобёр'
+                                    ];
 
-                            <!-- project -->
-                            <div class="project">
-                                <div class="project-photo"><img src="files/project-photo.jpg" alt="" width="213" height="129" /></div>
-                                <div class="project-info">
-                                    <div class="project-name"><a href="#">Складской комплекс. <span>Великий новгород.</span></a></div>
-                                    <div class="project-anonce"><a href="#">Состав «Сделай ПОЛ» изготавливается с использованием последних разработок и материалов, произведенных на базе передовых, в том числе нанотехнологий. Универсальность состава заключается в одновременном использовании различных эпоксидных смол, обеспечивающих одновременно функции грунтовочного и финишного покрытий. Поверхность не нужно грунтовать.</a></div>
-                                    <div class="project-link"><a href="#">Подробнее о проекте</a> &rarr;</div>
-                                </div>
-                            </div>
-                            <!-- project END -->
+                                    $(document).ready(function() {
+                                        $('.list-filter-input input').autocomplete({
+                                            source: availableDealers
+                                        });
+                                    });
+                                </script>
+                                <!-- list filter END -->
 
-                            <!-- project -->
-                            <div class="project">
-                                <div class="project-photo"><img src="files/project-photo.jpg" alt="" width="213" height="129" /></div>
-                                <div class="project-response-wrap">
-                                    <div class="project-response-photo"><img src="files/project-response-photo.jpg" alt="" width="100" height="130" /></div>
-                                    <div class="project-response">комплект «сделай пол» стал нашим спасением! 650 метров квадратных за 3 дня — сказали бы раньше — я бы не поверил!</div>
+                                <!-- list item -->
+                                <div class="list-item">
+                                    <div class="list-item-photo"><img src="files/dealer-1.jpg" alt="" width="215" height="139" /></div>
+                                    <div class="list-item-content">
+                                        <h2>Castorama</h2>
+                                        <div class="list-item-text">Castorama — французская компания, специализирующаяся на продажах товаров для дома, в том числе строительного ассортимента. Входит в состав британской корпорации Kingfisher.</div>
+                                        <div class="list-item-link"><a href="#">Подробнее о дилере и точках продаж</a> &rarr;</div>
+                                    </div>
                                 </div>
-                                <div class="project-info">
-                                    <div class="project-name"><a href="#">Складской комплекс. <span>Великий новгород.</span></a></div>
-                                    <div class="project-anonce"><a href="#">Состав «Сделай ПОЛ» изготавливается с использованием последних разработок и материалов, произведенных на базе передовых, в том числе нанотехнологий. Универсальность состава заключается в одновременном использовании различных эпоксидных смол, обеспечивающих одновременно функции грунтовочного и финишного покрытий. Поверхность не нужно грунтовать.</a></div>
-                                    <div class="project-link"><a href="#">Подробнее о проекте</a> &rarr;</div>
+                                <!-- list item END -->
+
+                                <!-- list item -->
+                                <div class="list-item">
+                                    <div class="list-item-photo"><img src="files/dealer-2.jpg" alt="" width="215" height="139" /></div>
+                                    <div class="list-item-content">
+                                        <h2>Сеть колор-студий «Дом маляра»</h2>
+                                        <div class="list-item-text">Castorama — французская компания, специализирующаяся на продажах товаров для дома, в том числе строительного ассортимента. Входит в состав британской корпорации Kingfisher.</div>
+                                        <div class="list-item-link"><a href="#">Подробнее о дилере и точках продаж</a> &rarr;</div>
+                                    </div>
                                 </div>
+                                <!-- list item END -->
+
+                                <!-- list item -->
+                                <div class="list-item">
+                                    <div class="list-item-photo"><img src="files/dealer-3.jpg" alt="" width="215" height="139" /></div>
+                                    <div class="list-item-content">
+                                        <h2>ООО "ЛДМ-ГРУПП"</h2>
+                                        <div class="list-item-text">Castorama — французская компания, специализирующаяся на продажах товаров для дома, в том числе строительного ассортимента. Входит в состав британской корпорации Kingfisher.</div>
+                                        <div class="list-item-link"><a href="#">Подробнее о дилере и точках продаж</a> &rarr;</div>
+                                    </div>
+                                </div>
+                                <!-- list item END -->
+
+                                <!-- list item -->
+                                <div class="list-item">
+                                    <div class="list-item-photo"><img src="files/dealer-4.jpg" alt="" width="215" height="139" /></div>
+                                    <div class="list-item-content">
+                                        <h2>СТРОЙМАРКТ</h2>
+                                        <div class="list-item-text">Castorama — французская компания, специализирующаяся на продажах товаров для дома, в том числе строительного ассортимента. Входит в состав британской корпорации Kingfisher.</div>
+                                        <div class="list-item-link"><a href="#">Подробнее о дилере и точках продаж</a> &rarr;</div>
+                                    </div>
+                                </div>
+                                <!-- list item END -->
+
+                                <!-- list item -->
+                                <div class="list-item">
+                                    <div class="list-item-photo"><img src="files/dealer-5.jpg" alt="" width="215" height="139" /></div>
+                                    <div class="list-item-content">
+                                        <h2>МИР КРАСОК (ИНТЕРНЕТ-МАГАЗИН)</h2>
+                                        <div class="list-item-text">Castorama — французская компания, специализирующаяся на продажах товаров для дома, в том числе строительного ассортимента. Входит в состав британской корпорации Kingfisher.</div>
+                                        <div class="list-item-link"><a href="#">Подробнее о дилере и точках продаж</a> &rarr;</div>
+                                    </div>
+                                </div>
+                                <!-- list item END -->
+
+                                <!-- list item -->
+                                <div class="list-item">
+                                    <div class="list-item-photo"><img src="files/dealer-6.jpg" alt="" width="215" height="139" /></div>
+                                    <div class="list-item-content">
+                                        <h2>ХОУМ ЦЕНТР</h2>
+                                        <div class="list-item-text">Castorama — французская компания, специализирующаяся на продажах товаров для дома, в том числе строительного ассортимента. Входит в состав британской корпорации Kingfisher.</div>
+                                        <div class="list-item-link"><a href="#">Подробнее о дилере и точках продаж</a> &rarr;</div>
+                                    </div>
+                                </div>
+                                <!-- list item END -->
+
+                                <!-- list item -->
+                                <div class="list-item">
+                                    <div class="list-item-photo"><img src="files/dealer-7.jpg" alt="" width="215" height="139" /></div>
+                                    <div class="list-item-content">
+                                        <h2>ИЗОЛЮКС</h2>
+                                        <div class="list-item-text">Castorama — французская компания, специализирующаяся на продажах товаров для дома, в том числе строительного ассортимента. Входит в состав британской корпорации Kingfisher.</div>
+                                        <div class="list-item-link"><a href="#">Подробнее о дилере и точках продаж</a> &rarr;</div>
+                                    </div>
+                                </div>
+                                <!-- list item END -->
+
+                                <!-- list item -->
+                                <div class="list-item">
+                                    <div class="list-item-photo"><img src="files/dealer-8.jpg" alt="" width="215" height="139" /></div>
+                                    <div class="list-item-content">
+                                        <h2>Группа компаний «ТЕХНОРЕСУРС»</h2>
+                                        <div class="list-item-text">Castorama — французская компания, специализирующаяся на продажах товаров для дома, в том числе строительного ассортимента. Входит в состав британской корпорации Kingfisher.</div>
+                                        <div class="list-item-link"><a href="#">Подробнее о дилере и точках продаж</a> &rarr;</div>
+                                    </div>
+                                </div>
+                                <!-- list item END -->
+
                             </div>
-                            <!-- project END -->
-                            
+                            <!-- list END -->
+
                             <!-- pager -->
                             <div class="pager">
                                 <div class="pager-list">
@@ -319,6 +409,41 @@
                     <div class="window-form-submit window-form-submit-2">
                         <input type="submit" value="Отправить заяку" />
                     </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="window" id="window-question">
+            <div class="window-inner">
+                <div class="window-close">
+                    <a href="#">Закрыть</a>
+                </div>
+                <div class="window-title">Задать вопрос</div>
+                <form action="#" method="post">
+                    <div class="window-form-row">
+                        <input type="text" name="name" value="" placeholder="Ваше имя" class="required" />
+                        <sup></sup>
+                    </div>
+
+                    <div class="window-form-row">
+                        <input type="text" name="email" value="" placeholder="Ваша электронная почта" class="required email" />
+                        <sup></sup>
+                    </div>
+
+                    <div class="window-form-row">
+                        <input type="text" name="phone" value="" placeholder="Ваш телефон" />
+                    </div>
+
+                    <div class="window-form-row">
+                        <textarea name="message" rows="5" cols="10" placeholder="Ваш вопрос" class="required"></textarea>
+                        <sup></sup>
+                    </div>
+
+                    <div class="window-form-submit">
+                        <input type="submit" value="Отправить сообщение" />
+                    </div>
+
+                    <div class="window-form-hint">* — звездочкой отмечены поля, обязательные для заполнения</div>
                 </form>
             </div>
         </div>

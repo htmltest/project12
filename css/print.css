@@ -16,8 +16,8 @@ img {border:none}
 
 .logo {position:absolute; left:0; top:25px; background:none}
 
-.title {position:absolute; left:241px; top:10px; width:200px; font-size:11px; color:#646464}
-.title div {color:#6193d8; text-transform:uppercase; font:28px/25px "pf_din_text_cond_pro_medium", arial, helvetica, sans-serif}
+.title {position:absolute; left:241px; top:10px; width:400px; font-size:11px; color:#646464}
+.title div {color:#6193d8; text-transform:uppercase; font:28px/25px "pf_din_text_cond_pro_medium", arial, helvetica, sans-serif; letter-spacing:-1px}
 .title div span {color:#434343; font-family:"pf_din_text_cond_pro_light", arial, helvetica, sans-serif}
 
 .hotline {position:absolute; right:0px; top:10px; font-size:11px; color:#646464}

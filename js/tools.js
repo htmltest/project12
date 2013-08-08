@@ -308,6 +308,7 @@ var mainSliderTimer = null;
         $.Placeholder.init({color: '#a5a5a5'});
         $('#window-subscribe form').validate();
         $('#window-comment form').validate();
+        $('#window-question form').validate();
 
         // формы
         $('.hotline-feedback a').click(function() {
@@ -321,6 +322,13 @@ var mainSliderTimer = null;
             $('.overlay').show();
             $('#window-subscribe').show();
             $('#window-subscribe').css({'margin-top':-$('#window-subscribe').height() / 2});
+            return false;
+        });
+
+        $('.question').click(function() {
+            $('.overlay').show();
+            $('#window-question').show();
+            $('#window-question').css({'margin-top':-$('#window-question').height() / 2});
             return false;
         });
 
@@ -539,6 +547,22 @@ var mainSliderTimer = null;
                     $.scrollTo('.order-form form .order-form-group:eq(' + (curIndex - 1) + ')', {offset: {'top': -92}, duration: speedScroll});
                 }
             }
+        });
+
+        // регионы
+        $('.region-title a').click(function() {
+            $(this).parent().parent().toggleClass('region-open');
+            return false;
+        });
+
+        $('.trade-point-detail-open-link a').click(function() {
+            $(this).parents().filter('.trade-point-info').addClass('trade-point-info-open');
+            return false;
+        });
+
+        $('.trade-point-detail-close-link a').click(function() {
+            $(this).parents().filter('.trade-point-info').removeClass('trade-point-info-open');
+            return false;
         });
 
     });

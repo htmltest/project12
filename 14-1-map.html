@@ -75,25 +75,73 @@
                 <div class="menu">
                     <ul>
                         <li><a href="#">О продукте</a></li>
-                        <li class="active"><a href="#">Вопросы и ответы</a></li>
+                        <li><a href="#">Вопросы и ответы</a></li>
                         <li><a href="#">Пресс-центр</a></li>
                         <li><a href="#">Проекты</a></li>
                         <li><a href="#">Дилеры</a></li>
-                        <li><a href="#">Где купить</a></li>
+                        <li class="active"><a href="#">Где купить</a></li>
                         <li><a href="#">Оплата и доставка</a></li>
                         <li><a href="#">Контакты</a></li>
                     </ul>
                 </div>
                 <!-- menu END -->
 
+                <div class="map-points" id="map">
+                </div>
+                <script src="http://api-maps.yandex.ru/2.0/?load=package.full&lang=ru-RU" type="text/javascript"></script>
+                <script type="text/javascript">
+                    ymaps.ready(init);
+
+                    function init () {
+                        var myMap = new ymaps.Map('map', {
+                            center: [55.76, 37.64],
+                            zoom: 8
+                        });
+                        myMap.controls
+                            .add('zoomControl')
+                            .add('typeSelector')
+                            .add('smallZoomControl')
+                            .add('mapTools');
+                        myPlacemark = new ymaps.Placemark([55.76, 37.64], {
+                            balloonContent: '<div class="geo-baloon-city"><div class="geo-baloon-title">Москва</div><div class="geo-ballon-city-link"><a href="#">Посмотреть всех дилеров в городе</a></div></div>'
+                        }, {
+                            balloonShadow: false,
+                            iconImageHref: 'images/geo-icon-city.png',
+                            iconImageSize: [26, 35]
+                        });
+                        myMap.geoObjects.add(myPlacemark);
+
+                        myPlacemark = new ymaps.Placemark([55.96, 37.84], {
+                            balloonContent: '<div class="geo-baloon-place"><div class="geo-baloon-title">ООО «Спецпродукт»</div><div class="geo-ballon-row"><span>Адрес:</span>Ставрополь, пр-кт  Кулакова,  д. 8</div><div class="geo-ballon-row"><span>Телефон:</span>8 (495) 022-22-22, 8 (495) 022-22-22, 8 (495) 022-22-22</div><div class="geo-ballon-row"><span>Время работы:</span>с 8 до 17, Вс — выходной</div><div class="geo-ballon-row"><span>Вебсайт:</span><a href="#">www.spezproduct.ru</a></div></div>'
+                        }, {
+                            balloonShadow: false,
+                            iconImageHref: 'images/geo-icon-place.png',
+                            iconImageSize: [26, 35]
+                        });
+                        myMap.geoObjects.add(myPlacemark);
+
+                        myPlacemark = new ymaps.Placemark([55.56, 37.44], {
+                            balloonContent: '<div class="geo-baloon-place"><div class="geo-baloon-title">ООО «Спецпродукт»</div></div>'
+                        }, {
+                            balloonShadow: false,
+                            iconImageHref: 'images/geo-icon-place.png',
+                            iconImageSize: [26, 35]
+                        });
+                        myMap.geoObjects.add(myPlacemark);
+                    }
+                </script>
+
                 <!-- middle -->
                 <div class="middle">
 
                     <div class="left">
+                        <div class="left-title">Торговые сети</div>
                         <ul>
-                            <li>Вопросы и ответы</li>
-                            <li><a href="#">Советы</a></li>
-                            <li><a href="#">Публикации и статьи</a></li>
+                            <li><a href="#">Все сети</a></li>
+                            <li><a href="#">Оби</a></li>
+                            <li>Леруа Мерлен</li>
+                            <li><a href="#">Краски.ру</a></li>
+                            <li><a href="#">Дом маляра</a></li>
                         </ul>
                     </div>
 
@@ -101,123 +149,123 @@
                         <div class="content">
 
                             <!-- breadcrumbs -->
-                            <div class="breadcrumbs"><a href="#">Сделай пол</a><span>&rarr;</span><a href="#">Полезная информация</a><span>&rarr;</span>Вопросы и ответы</div>
+                            <div class="breadcrumbs"><a href="#">Сделай пол</a><span>&rarr;</span><a href="#">Точки продаж</a><span>&rarr;</span><a href="#">Федеральный округ</a><span>&rarr;</span><a href="#">Свердловская область</a><span>&rarr;</span>Екатеринбург</div>
                             <!-- breadcrumbs END -->
 
-                            <h1>Вопросы и ответы</h1>
+                            <h1>Екатеринбург</h1>
 
-                            <!-- list -->
-                            <div class="list">
+                            <!-- trade list -->
+                            <div class="trade-list">
 
-                                <a href="#" class="question">Задать вопрос</a>
+                                <div class="trade">
+                                    <div class="trade-top">
+                                        <div class="trade-logo"><img src="files/trade-logo-1.png" alt="" width="100" height="59" /></div>
+                                        <div class="trade-name">Леруа Мерлен</div>
+                                    </div>
 
-                                <!-- list item -->
-                                <div class="list-item">
-                                    <div class="list-item-photo"><img src="files/complect.jpg" alt="" width="215" height="139" /></div>
-                                    <div class="list-item-content">
-                                        <h2>Как подготовить поверхность?</h2>
-                                        <div class="list-item-text">Если вы только что залили свое бетонное основание, то позаботьтесь сразу о том, чтобы оно было ровным. В большей степени ровность основания зависит от вас. Это вам ничего не будет стоить.</div>
-                                        <div class="list-item-link"><a href="#">Читать подробнее</a> &rarr;</div>
+                                    <div class="trade-points">
+
+                                        <div class="trade-point">
+                                            <div class="trade-point-info">
+                                                <div class="trade-point-name">Леруа Мерлен Мега Московский тракт</div>
+                                                <div class="trade-point-address">Торговый комплекс Усадьба МО, г. Ногинск, ул. Ильича, д.21</div>
+                                                <div class="trade-point-detail-open-link"><a href="#">Подробнее о точке продаж</a> &nbsp;&darr;</div>
+                                                <div class="trade-point-detail">
+                                                    <div class="trade-point-detail-row">
+                                                        <div class="trade-point-detail-name">Город:</div>
+                                                        <div class="trade-point-detail-val">Ставрополь</div>
+                                                    </div>
+                                                    <div class="trade-point-detail-row">
+                                                        <div class="trade-point-detail-name">Адрес:</div>
+                                                        <div class="trade-point-detail-val">Ставрополь, пр-кт  Кулакова,  д. 8</div>
+                                                    </div>
+                                                    <div class="trade-point-detail-row">
+                                                        <div class="trade-point-detail-name">Телефон:</div>
+                                                        <div class="trade-point-detail-val">8 (495) 022-22-22, 8 (495) 022-22-22, 8 (495) 022-22-22</div>
+                                                    </div>
+                                                    <div class="trade-point-detail-row">
+                                                        <div class="trade-point-detail-name">Время работы:</div>
+                                                        <div class="trade-point-detail-val">С 8 до 17, Вс — выходной</div>
+                                                    </div>
+                                                    <div class="trade-point-detail-row">
+                                                        <div class="trade-point-detail-name">Веб-сайт:</div>
+                                                        <div class="trade-point-detail-val"><a href="#">www.spoffer.biz</a></div>
+                                                    </div>
+                                                </div>
+                                                <div class="trade-point-detail-close-link"><a href="#">Свернуть</a> &nbsp;&uarr;</div>
+                                            </div>
+                                            <a href="#" class="trade-point-map"><sup></sup><span>Показать на карте</span> &rarr;</a>
+                                        </div>
+
+                                        <div class="trade-point">
+                                            <div class="trade-point-info">
+                                                <div class="trade-point-name">Леруа Мерлен Мега Химмаш</div>
+                                                <div class="trade-point-address">Московская область, пересечение МКАД и а/м Москва - Н.Новгород (шоссе Энтузиастов), ТЦ Энтузиасты, первый этаж, офис 134</div>
+                                                <div class="trade-point-detail-open-link"><a href="#">Подробнее о точке продаж</a> &nbsp;&darr;</div>
+                                                <div class="trade-point-detail">
+                                                    <div class="trade-point-detail-row">
+                                                        <div class="trade-point-detail-name">Город:</div>
+                                                        <div class="trade-point-detail-val">Ставрополь</div>
+                                                    </div>
+                                                    <div class="trade-point-detail-row">
+                                                        <div class="trade-point-detail-name">Адрес:</div>
+                                                        <div class="trade-point-detail-val">Ставрополь, пр-кт  Кулакова,  д. 8</div>
+                                                    </div>
+                                                    <div class="trade-point-detail-row">
+                                                        <div class="trade-point-detail-name">Телефон:</div>
+                                                        <div class="trade-point-detail-val">8 (495) 022-22-22, 8 (495) 022-22-22, 8 (495) 022-22-22</div>
+                                                    </div>
+                                                    <div class="trade-point-detail-row">
+                                                        <div class="trade-point-detail-name">Время работы:</div>
+                                                        <div class="trade-point-detail-val">С 8 до 17, Вс — выходной</div>
+                                                    </div>
+                                                    <div class="trade-point-detail-row">
+                                                        <div class="trade-point-detail-name">Веб-сайт:</div>
+                                                        <div class="trade-point-detail-val"><a href="#">www.spoffer.biz</a></div>
+                                                    </div>
+                                                </div>
+                                                <div class="trade-point-detail-close-link"><a href="#">Свернуть</a> &nbsp;&uarr;</div>
+                                            </div>
+                                            <a href="#" class="trade-point-map"><sup></sup><span>Показать на карте</span> &rarr;</a>
+                                        </div>
+
+                                        <div class="trade-point">
+                                            <div class="trade-point-info">
+                                                <div class="trade-point-name">Леруа Мерлен Мега Химмаш</div>
+                                                <div class="trade-point-address">Торговый комплекс Усадьба МО, г. Ногинск, ул. Ильича, д.21</div>
+                                                <div class="trade-point-detail-open-link"><a href="#">Подробнее о точке продаж</a> &nbsp;&darr;</div>
+                                                <div class="trade-point-detail">
+                                                    <div class="trade-point-detail-row">
+                                                        <div class="trade-point-detail-name">Город:</div>
+                                                        <div class="trade-point-detail-val">Ставрополь</div>
+                                                    </div>
+                                                    <div class="trade-point-detail-row">
+                                                        <div class="trade-point-detail-name">Адрес:</div>
+                                                        <div class="trade-point-detail-val">Ставрополь, пр-кт  Кулакова,  д. 8</div>
+                                                    </div>
+                                                    <div class="trade-point-detail-row">
+                                                        <div class="trade-point-detail-name">Телефон:</div>
+                                                        <div class="trade-point-detail-val">8 (495) 022-22-22, 8 (495) 022-22-22, 8 (495) 022-22-22</div>
+                                                    </div>
+                                                    <div class="trade-point-detail-row">
+                                                        <div class="trade-point-detail-name">Время работы:</div>
+                                                        <div class="trade-point-detail-val">С 8 до 17, Вс — выходной</div>
+                                                    </div>
+                                                    <div class="trade-point-detail-row">
+                                                        <div class="trade-point-detail-name">Веб-сайт:</div>
+                                                        <div class="trade-point-detail-val"><a href="#">www.spoffer.biz</a></div>
+                                                    </div>
+                                                </div>
+                                                <div class="trade-point-detail-close-link"><a href="#">Свернуть</a> &nbsp;&uarr;</div>
+                                            </div>
+                                            <a href="#" class="trade-point-map"><sup></sup><span>Показать на карте</span> &rarr;</a>
+                                        </div>
+
                                     </div>
                                 </div>
-                                <!-- list item END -->
-
-                                <!-- list item -->
-                                <div class="list-item">
-                                    <div class="list-item-photo"><img src="files/complect.jpg" alt="" width="215" height="139" /></div>
-                                    <div class="list-item-content">
-                                        <h2>Что делать, если бетон основательно загрязнен?</h2>
-                                        <div class="list-item-text">Решить эту проблему поможет специальное моющее средство, которое предусмотрено в комплекте «Сделай ПОЛ». Итак, Вы убрали и удалили пыль на полу...</div>
-                                        <div class="list-item-link"><a href="#">Читать подробнее</a> &rarr;</div>
-                                    </div>
-                                </div>
-                                <!-- list item END -->
-
-                                <!-- list item -->
-                                <div class="list-item">
-                                    <div class="list-item-content">
-                                        <h2>Как подготовить поверхность?</h2>
-                                        <div class="list-item-text">Если вы только что залили свое бетонное основание, то позаботьтесь сразу о том, чтобы оно было ровным. В большей степени ровность основания зависит от вас. Это вам ничего не будет стоить.</div>
-                                        <div class="list-item-link"><a href="#">Читать подробнее</a> &rarr;</div>
-                                    </div>
-                                </div>
-                                <!-- list item END -->
-
-                                <!-- list item -->
-                                <div class="list-item">
-                                    <div class="list-item-photo"><img src="files/complect.jpg" alt="" width="215" height="139" /></div>
-                                    <div class="list-item-content">
-                                        <h2>Что делать, если бетон основательно загрязнен?</h2>
-                                        <div class="list-item-text">Решить эту проблему поможет специальное моющее средство, которое предусмотрено в комплекте «Сделай ПОЛ». Итак, Вы убрали и удалили пыль на полу...</div>
-                                        <div class="list-item-link"><a href="#">Читать подробнее</a> &rarr;</div>
-                                    </div>
-                                </div>
-                                <!-- list item END -->
-
-                                <!-- list item -->
-                                <div class="list-item">
-                                    <div class="list-item-photo"><img src="files/complect.jpg" alt="" width="215" height="139" /></div>
-                                    <div class="list-item-content">
-                                        <h2>Как подготовить поверхность?</h2>
-                                        <div class="list-item-text">Если вы только что залили свое бетонное основание, то позаботьтесь сразу о том, чтобы оно было ровным. В большей степени ровность основания зависит от вас. Это вам ничего не будет стоить.</div>
-                                        <div class="list-item-link"><a href="#">Читать подробнее</a> &rarr;</div>
-                                    </div>
-                                </div>
-                                <!-- list item END -->
-
-                                <!-- list item -->
-                                <div class="list-item">
-                                    <div class="list-item-photo"><img src="files/complect.jpg" alt="" width="215" height="139" /></div>
-                                    <div class="list-item-content">
-                                        <h2>Что делать, если бетон основательно загрязнен?</h2>
-                                        <div class="list-item-text">Решить эту проблему поможет специальное моющее средство, которое предусмотрено в комплекте «Сделай ПОЛ». Итак, Вы убрали и удалили пыль на полу...</div>
-                                        <div class="list-item-link"><a href="#">Читать подробнее</a> &rarr;</div>
-                                    </div>
-                                </div>
-                                <!-- list item END -->
-
-                                <!-- list item -->
-                                <div class="list-item">
-                                    <div class="list-item-photo"><img src="files/complect.jpg" alt="" width="215" height="139" /></div>
-                                    <div class="list-item-content">
-                                        <h2>Как подготовить поверхность?</h2>
-                                        <div class="list-item-text">Если вы только что залили свое бетонное основание, то позаботьтесь сразу о том, чтобы оно было ровным. В большей степени ровность основания зависит от вас. Это вам ничего не будет стоить.</div>
-                                        <div class="list-item-link"><a href="#">Читать подробнее</a> &rarr;</div>
-                                    </div>
-                                </div>
-                                <!-- list item END -->
-
-                                <!-- list item -->
-                                <div class="list-item">
-                                    <div class="list-item-photo"><img src="files/complect.jpg" alt="" width="215" height="139" /></div>
-                                    <div class="list-item-content">
-                                        <h2>Что делать, если бетон основательно загрязнен?</h2>
-                                        <div class="list-item-text">Решить эту проблему поможет специальное моющее средство, которое предусмотрено в комплекте «Сделай ПОЛ». Итак, Вы убрали и удалили пыль на полу...</div>
-                                        <div class="list-item-link"><a href="#">Читать подробнее</a> &rarr;</div>
-                                    </div>
-                                </div>
-                                <!-- list item END -->
 
                             </div>
-                            <!-- list END -->
-
-                            <!-- pager -->
-                            <div class="pager">
-                                <div class="pager-list">
-                                    <div class="pager-left">
-                                        <a href="#" class="pager-prev">Начало</a>
-                                        <a href="#" class="pager-prev">Назад</a>
-                                    </div>
-                                    <a href="#">1</a>
-                                    <a href="#">2</a>
-                                    <span>3</span>
-                                    <a href="#">4</a>
-                                    <div class="pager-right">
-                                        <a href="#" class="pager-next">Вперед</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- pager END -->
+                            <!-- trade list END -->
 
                         </div>
                     </div>

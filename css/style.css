@@ -59,13 +59,14 @@ img {border:none}
 .menu ul li {float:left; padding:0; margin:0; background:url(../images/menu.png) no-repeat left center; margin-right:-1px; position:relative}
 .menu ul li:first-child {background:none}
 .menu ul li a {float:left; height:40px; color:#fff; text-decoration:none; text-align:center}
-.menu ul li a {width:119px; padding-left:4px}
-.menu ul li+li a {width:208px; padding:0}
-.menu ul li+li+li a {width:99px}
-.menu ul li+li+li+li a {width:225px}
-.menu ul li+li+li+li+li a {width:109px}
-.menu ul li+li+li+li+li+li a {width:113px}
-.menu ul li+li+li+li+li+li+li a {width:104px; padding-right:5px}
+.menu ul li a {width:115px; padding-left:3px}
+.menu ul li+li a {width:172px; padding:0}
+.menu ul li+li+li a {width:122px}
+.menu ul li+li+li+li a {width:96px}
+.menu ul li+li+li+li+li a {width:86px}
+.menu ul li+li+li+li+li+li a {width:111px}
+.menu ul li+li+li+li+li+li+li a {width:163px}
+.menu ul li+li+li+li+li+li+li+li a {width:107px; padding-right:5px}
 .menu ul li:hover,
 .menu ul li.active {z-index:2}
 .menu ul li:hover a,
@@ -79,6 +80,8 @@ img {border:none}
 .left ul li {margin:0; padding:9px 0; border-bottom:1px solid #dbdbdb; color:#ee3a43}
 .left ul li a {color:#333; text-decoration:none}
 .left ul li a:hover {color:#ee3a43; text-decoration:none}
+
+.left-title {font:24px/24px "pf_din_text_cond_pro", arial, helvetica, sans-serif; color:#514f4f; padding:3px 0 16px 0}
 
 .container {padding:16px 0 0 0}
 .left+.container {margin-left:220px}
@@ -181,12 +184,17 @@ img {border:none}
 .pager-left span,
 .pager-right span {color:#aaa}
 
-.project-detail {width:100%; border-top:1px solid #dadada; margin-top:2px; padding:20px 0 19px 0}
+.project-photos {width:100%; border-top:1px solid #dadada; padding:30px 0 0 0; margin:12px 0 0 0}
+.project-photos:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.project-photo {float:left; width:308px; height:203px; position:relative; border:4px solid #ececec; overflow:hidden; margin:0 0 0 16px}
+.project-photo:first-child {margin:0}
+.project-photo span {display:block; position:absolute; left:0; top:0; height:37px; padding:0 12px; font:20px/37px "pf_din_text_cond_pro_medium", arial, helvetica, sans-serif; text-transform:uppercase; color:#fff; background:url(../images/project-photo.png)}
+
+.project-detail {width:100%; padding:16px 0 15px 0}
 .project-detail:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
-.project-detail-photo {float:right; width:495px; border:5px solid #ebebeb; position:relative; overflow:hidden; line-height:0}
-.project-detail-text {margin-bottom:-14px}
+.project-detail-text {float:left; width:480px}
 .project-detail-photo .project-detail-text {margin-right:525px}
-.project-detail-text h2 {color:#434343; padding:3px 0 6px 0}
+.project-detail-text h2 {color:#6193d8; padding:0 0 6px 0}
 .project-detail-text h2 strong {font-weight:normal; font-family:"pf_din_text_cond_pro_medium", arial, helvetica, sans-serif}
 .project-detail-opts {padding:0 0 14px 0}
 .project-detail-opts p {padding:0}
@@ -446,7 +454,7 @@ img {border:none}
 .sert-item-photo img {vertical-align:middle}
 .sert-item-name {font-size:12px; line-height:15px; color:#656565; font-style:italic; word-wrap:break-word; padding:8px 0 0 0; letter-spacing:0; min-height:45px}
 
-.list {padding:2px 0 0 0}
+.list {padding:2px 0 0 0; position:relative}
 .list-item {width:100%; border-top:1px solid #dadada; padding:20px 0}
 .list-item:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
 .list-item-photo {float:left; width:215px; line-height:0; overflow:hidden; position:relative; border:5px solid #ebebeb}
@@ -456,9 +464,24 @@ img {border:none}
 .list-item-content h2 a {color:#ee3a43; text-decoration:none}
 .list-item-date {font-size:13px; line-height:18px; color:#ee3a43; text-transform:uppercase}
 .list-item-text {font-size:13px; line-height:18px; padding:7px 0 0 0}
-.list-item-text p {margin:0; padding:0}
+.list-item-text p {margin:0 0 5px 0; padding:0}
 .list-item-text a {color:#333; text-decoration:none}
 .list-item-link {font-size:11px; line-height:18px; padding:5px 0 0 0; color:#79a8e7}
+
+.list-filter {position:absolute; right:0; top:-42px}
+.list-filter form {margin:0; padding:0}
+.list-filter-input {float:left; width:312px; position:relative}
+.list-filter-input input {border:none; height:20px; padding:4px 10px; width:292px; color:#464646; font:14px/20px arial, helvetica, sans-serif; vertical-align:top; background:#f2f2f2; -webkit-box-shadow:inset 0 1px 2px rgba(2, 2, 2, .4); -moz-box-shadow:inset 0 1px 2px rgba(2, 2, 2, .4); box-shadow:inset 0 1px 2px rgba(2, 2, 2, .4); border-radius:3px; -moz-border-radius:3px; -webkit-border-radius:3px; -khtml-border-radius:3px; behavior:url(./js/PIE.htc); margin:0; outline:none}
+.list-filter-input-map {width:202px}
+.list-filter-input-map input {width:182px}
+
+.list-filter-submit {float:left; padding:0 0 0 9px}
+.list-filter-submit input {width:86px; height:29px; vertical-align:top; text-align:center; border:none; background:url(../images/list-filter-submit.png); outline:none; cursor:pointer; margin:0; padding:0; color:#fff; text-shadow:0 1px 0 #44628b; font:bold 12px/26px arial, helvetica, sans-serif}
+.list-filter-submit input:hover {background-position:left -29px}
+.list-filter-submit input:active {background-position:left -58px}
+
+.question {display:block; position:absolute; right:0; top:-51px; width:200px; height:31px; font-size:12px; line-height:31px; font-weight:bold; color:#fff; text-align:center; text-transform:uppercase; background:#86b4f1; text-decoration:none}
+.question:hover {color:#fff; background:#5c90d5}
 
 .info-group {border-bottom:1px solid #dadada; padding:0 0 2px 0; margin:0 0 37px 0}
 .info-group-header {width:100%}
@@ -806,3 +829,89 @@ img {border:none}
 .order-result-block-name {float:left; font-size:12px; font-style:italic; color:#808080; width:150px; padding:1px 0 0 0}
 .order-result-block-value {float:left; width:650px; color:#6193d8}
 .order-result-block-value em {font-size:13px; line-height:17px}
+
+.points {border-top:1px solid #dadada}
+.points-title {font:30px/30px "pf_din_text_cond_pro_light", arial, helvetica, sans-serif; color:#514f4f; text-transform:uppercase; padding:33px 0 0 0; position:relative}
+.points-groups {margin-top:-8px}
+.points-group {background:url(../images/points-group.png) repeat-x; padding:41px 0 16px 0}
+.points-group:first-child {background:none}
+.points-group-title {font:24px/24px "pf_din_text_cond_pro", arial, helvetica, sans-serif; text-transform:uppercase; color:#ee3a43; padding:0 0 6px 0}
+.point {width:100%; padding:11px 0 8px 0; font-size:13px; line-height:16px; margin:0 0 -6px 0}
+.point:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.point:hover {background:#f5f5f5}
+.point-address {float:left; padding:0 0 0 10px; width:480px}
+.point:hover .point-address {color:#ee3a43}
+.point-map {float:right; position:relative; color:#3f7bcd; padding:0 10px 0 0}
+.point:hover .point-map  {color:#ee3a43}
+.point-map span {display:block; position:absolute; left:-20px; top:0; width:10px; height:15px; background:url(../images/point-map.png)}
+.point:hover .point-map span {background-position:left -15px}
+.points-sets {padding:4px 0 0 0}
+.points-set {border-top:1px solid #dadada; padding:13px 0 17px 0}
+.points-set:first-child {border:none}
+.points-set-title {font:24px/24px "pf_din_text_cond_pro", arial, helvetica, sans-serif; color:#3f7bcd; padding:0 0 2px 0}
+
+.regions {border-top:1px solid #dadada; padding:12px 0 0 0}
+.region {border-bottom:1px solid #efefef; padding:7px 0 6px 0}
+.region-open {border-bottom:1px solid #dadada}
+.region-title {font:24px/24px "pf_din_text_cond_pro_light", arial, helvetica, sans-serif; text-transform:uppercase}
+.region-title a {color:#3f7bcd; text-decoration:none}
+.region-list-title {font:24px/24px "pf_din_text_cond_pro_light", arial, helvetica, sans-serif; text-transform:uppercase; color:#3f7bcd}
+.region-open .region-title a {color:#ee3a43}
+.region-title a:hover {color:#ee3a43}
+
+.region-list {width:100%; display:none; margin-bottom:-10px}
+.region-open .region-list {display:block}
+.region-list:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.region-list-col {float:left; width:190px}
+.region-list-letter {color:#3f7bcd; font:24px/24px "pf_din_text_cond_pro_medium", arial, helvetica, sans-serif; text-transform:uppercase; padding:13px 0 3px 0}
+.region-list-cities {font-size:13px; line-height:20px; padding:0 0 21px 0}
+.region-list-cities p {margin:0; padding:0}
+.region-list-cities a {color:#333; text-decoration:none}
+.region-list-cities a:hover {color:#ee3a43; text-decoration:underline}
+
+.map-points {height:400px; position:relative; margin:20px 0 10px 0}
+
+.oblasts {width:100%; border-top:1px solid #dadada}
+.oblasts:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.oblasts-col {float:left; width:252px}
+.oblasts-letter {color:#3f7bcd; font:24px/24px "pf_din_text_cond_pro_medium", arial, helvetica, sans-serif; text-transform:uppercase; padding:13px 0 3px 0}
+.oblasts-list {font-size:13px; line-height:20px; padding:0 0 21px 0}
+.oblasts-list p {margin:0; padding:0}
+.oblasts-list a {color:#333; text-decoration:none}
+.oblasts-list a:hover {color:#ee3a43; text-decoration:underline}
+
+.trade-list {border-top:1px solid #dadada}
+.trade {background:url(../images/points-group.png) repeat-x; padding:4px 0 0 0}
+.trade:first-child {background:none; margin-top:-14px}
+.trade-top {width:100%; padding:40px 0 16px 0}
+.trade-top:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.trade-logo {float:left; width:100px; position:relative; line-height:0; overflow:hidden; border:5px solid #ebebeb}
+.trade-name {margin:0 0 0 138px; font:30px/30px "pf_din_text_cond_pro_light", arial, helvetica, sans-serif; text-transform:uppercase; color:#ee3a43; padding:20px 0 0 0}
+.trade-other {font:30px/30px "pf_din_text_cond_pro_light", arial, helvetica, sans-serif; text-transform:uppercase; color:#ee3a43; padding:37px 0 0 0}
+.trade-point {border-top:1px solid #dadada; width:100%; padding:16px 0 20px 0}
+.trade-point:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.trade-point:first-child {border:none}
+.trade-point-info {float:left; width:470px}
+.trade-point-name {font:24px/24px "pf_din_text_cond_pro", arial, helvetica, sans-serif; color:#3f7bcd}
+.trade-point-address {font-size:13px; line-height:16px; padding:13px 0 0 0}
+.trade-point-detail-open-link {font-size:12px; line-height:16px; color:#3f7bcd; padding:8px 0 0 0}
+.trade-point-detail-open-link a {font-size:13px; color:#3f7bcd; text-decoration:none; background:url(../images/trade-point-detail-link.png) repeat-x left bottom}
+.trade-point-detail-open-link a:hover {color:#d9232c; background:none}
+.trade-point-detail-close-link {display:none; font-size:12px; line-height:16px; color:#3f7bcd; padding:16px 0 0 0}
+.trade-point-detail-close-link a {font-size:13px; color:#3f7bcd; text-decoration:none; background:url(../images/trade-point-detail-link.png) repeat-x left bottom}
+.trade-point-detail-close-link a:hover {color:#d9232c; background:none}
+.trade-point-map {float:right; font-size:13px; line-height:16px; position:relative; color:#3f7bcd; text-decoration:none; margin:8px 0 0 0}
+.trade-point-map span {text-decoration:underline}
+.trade-point-map:hover {color:#ee3a43}
+.trade-point-map sup {display:block; position:absolute; left:-20px; top:0; width:10px; height:15px; background:url(../images/point-map.png)}
+.trade-point-map:hover sup {background-position:left -15px}
+.trade-point-detail {padding:15px 0 0 0; display:none}
+.trade-point-detail-row {width:100%; font-size:13px; line-height:16px; padding:0 0 5px 0}
+.trade-point-detail-row:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.trade-point-detail-name {float:left; width:90px; font-size:11px; color:#a5a5a5; padding:1px 0 0 0}
+.trade-point-detail-val {margin-left:100px}
+.trade-point-detail-val a {color:#3f7bcd}
+.trade-point-detail-val a:hover {color:#ee3a43}
+.trade-point-info-open .trade-point-detail {display:block}
+.trade-point-info-open .trade-point-detail-open-link {display:none}
+.trade-point-info-open .trade-point-detail-close-link {display:block}
