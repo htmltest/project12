@@ -183,7 +183,12 @@
 
                                     $(document).ready(function() {
                                         $('.list-filter-input input').autocomplete({
-                                            source: availableDealers
+                                            source: function(request, response) {
+                                                var matcher = new RegExp('^' + $.ui.autocomplete.escapeRegex( request.term ), 'i');
+                                                response($.grep(availableDealers, function(item) {
+                                                    return matcher.test(item);
+                                                }));
+                                            }
                                         });
                                     });
                                 </script>
