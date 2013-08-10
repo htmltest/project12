@@ -42,7 +42,7 @@ var mainSliderTimer = null;
             'transitionOut': 'none'
         });
 
-        $('.example-img a, .sert-item-photo a, .project-gallery-content a, .main-sert-preview a').fancybox();
+        $('.example-img a, .sert-item-photo a, .project-gallery-content a, .main-sert-preview a, .project-photo a').fancybox();
 
         // партнеры
         $(window).load(function() {

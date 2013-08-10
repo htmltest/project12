@@ -467,6 +467,7 @@ img {border:none}
 .list-item-text p {margin:0 0 5px 0; padding:0}
 .list-item-text a {color:#333; text-decoration:none}
 .list-item-link {font-size:11px; line-height:18px; padding:5px 0 0 0; color:#79a8e7}
+.list-item-link-dealer {font-size:12px}
 
 .list-filter {position:absolute; right:0; top:-42px}
 .list-filter form {margin:0; padding:0}
@@ -835,7 +836,7 @@ img {border:none}
 .points-groups {margin-top:-8px}
 .points-group {background:url(../images/points-group.png) repeat-x; padding:41px 0 16px 0}
 .points-group:first-child {background:none}
-.points-group-title {font:24px/24px "pf_din_text_cond_pro", arial, helvetica, sans-serif; text-transform:uppercase; color:#ee3a43; padding:0 0 6px 0}
+.points-group-title {font:24px/24px "pf_din_text_cond_pro", arial, helvetica, sans-serif; text-transform:uppercase; color:#3f7bcd; padding:0 0 6px 0}
 .point {width:100%; padding:11px 0 8px 0; font-size:13px; line-height:16px; margin:0 0 -6px 0}
 .point:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
 .point:hover {background:#f5f5f5}
@@ -848,7 +849,7 @@ img {border:none}
 .points-sets {padding:4px 0 0 0}
 .points-set {border-top:1px solid #dadada; padding:13px 0 17px 0}
 .points-set:first-child {border:none}
-.points-set-title {font:24px/24px "pf_din_text_cond_pro", arial, helvetica, sans-serif; color:#3f7bcd; padding:0 0 2px 0}
+.points-set-title {font:24px/24px "pf_din_text_cond_pro", arial, helvetica, sans-serif; color:#ee3a43; padding:0 0 2px 0}
 
 .regions {border-top:1px solid #dadada; padding:12px 0 0 0}
 .region {border-bottom:1px solid #efefef; padding:7px 0 6px 0}
@@ -895,11 +896,15 @@ img {border:none}
 .trade-point-name {font:24px/24px "pf_din_text_cond_pro", arial, helvetica, sans-serif; color:#3f7bcd}
 .trade-point-address {font-size:13px; line-height:16px; padding:13px 0 0 0}
 .trade-point-detail-open-link {font-size:12px; line-height:16px; color:#3f7bcd; padding:8px 0 0 0}
-.trade-point-detail-open-link a {font-size:13px; color:#3f7bcd; text-decoration:none; background:url(../images/trade-point-detail-link.png) repeat-x left bottom}
-.trade-point-detail-open-link a:hover {color:#d9232c; background:none}
+.trade-point-detail-open-link a {font-size:13px; color:#3f7bcd; text-decoration:none}
+.trade-point-detail-open-link a:hover {color:#d9232c}
+.trade-point-detail-open-link a span {background:url(../images/trade-point-detail-link.png) repeat-x left bottom}
+.trade-point-detail-open-link a:hover span {background:none}
 .trade-point-detail-close-link {display:none; font-size:12px; line-height:16px; color:#3f7bcd; padding:16px 0 0 0}
-.trade-point-detail-close-link a {font-size:13px; color:#3f7bcd; text-decoration:none; background:url(../images/trade-point-detail-link.png) repeat-x left bottom}
-.trade-point-detail-close-link a:hover {color:#d9232c; background:none}
+.trade-point-detail-close-link a {font-size:13px; color:#3f7bcd; text-decoration:none}
+.trade-point-detail-close-link a:hover {color:#d9232c}
+.trade-point-detail-close-link a span {background:url(../images/trade-point-detail-link.png) repeat-x left bottom}
+.trade-point-detail-close-link a:hover span {background:none}
 .trade-point-map {float:right; font-size:13px; line-height:16px; position:relative; color:#3f7bcd; text-decoration:none; margin:8px 0 0 0}
 .trade-point-map span {text-decoration:underline}
 .trade-point-map:hover {color:#ee3a43}
