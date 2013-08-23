@@ -565,6 +565,20 @@ var mainSliderTimer = null;
             return false;
         });
 
+        // переключение на карте
+        $('.geo-baloon-tabs-menu a').live('click', function() {
+            var curLi = $(this).parent();
+            if (!curLi.hasClass('active')) {
+                var curIndex = curLi.parent().find('li').index(curLi);
+                curLi.parent().find('li').removeClass('active');
+                curLi.addClass('active');
+                var curTabs = curLi.parent().parent().parent();
+                curTabs.find('.geo-baloon-tabs-content').removeClass('active');
+                curTabs.find('.geo-baloon-tabs-content').eq(curIndex).addClass('active');
+            }
+            return false;
+        });
+
     });
 
     // пересчет заказа
