@@ -793,15 +793,15 @@ img {border:none}
 .geo-ballon-row {font:10px/12px arial, helvetica, sans-serif; color:#333; padding:0 0 5px 0}
 .geo-ballon-row span {width:87px; display:inline-block; color:#a5a5a5}
 
-.geo-baloon-tabs {position:relative; overflow:hidden}
+.geo-baloon-tabs {position:relative; overflow:hidden; min-width:470px; background:#fff}
 .geo-baloon-tabs-menu {float:left; width:105px; border-right:2px solid #e3e3e3; font:11px/13px arial, helvetica, sans-serif}
 .geo-baloon-tabs-menu ul {margin:0; padding:0; list-style:none}
 .geo-baloon-tabs-menu ul li {margin:9px 0; padding:0}
 .geo-baloon-tabs-menu ul li a {color:#ee3a43; text-decoration:none; background:url(../images/geo-tabs.png) repeat-x left bottom}
 .geo-baloon-tabs-menu ul li.active a {color:#434343; background:none}
 .geo-baloon-tabs-menu ul li a:hover {background:none}
-.geo-baloon-tabs-container {float:left; padding:0 11px}
-.geo-baloon-tabs-content {display:none}
+.geo-baloon-tabs-container {margin:0 11px 0 116px}
+.geo-baloon-tabs-content {display:none; float:left; width:100%}
 .geo-baloon-tabs-content.active {display:block}
 
 .ymaps-b-balloon__tr {width:15px !important; background:url(../images/ymaps-b-balloon__tr.png) !important; margin-left:-15px !important}
